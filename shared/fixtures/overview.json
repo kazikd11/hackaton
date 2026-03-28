@@ -1,74 +1,112 @@
 {
-  "total_processes": 6,
-  "total_cases": 14280,
-  "total_events": 892450,
-  "total_hours": 4426.2,
-  "total_users": 44,
-  "observation_period": "2026-03-01 to 2026-03-20",
+  "date_range": {
+    "start": "2026-03-01T09:09:54.535000",
+    "end": "2026-03-20T10:08:06.357000"
+  },
+  "total_cases": 1315,
+  "total_users": 50,
+  "total_events": 558859,
   "process_families": [
     {
-      "id": "communication",
-      "name": "Communication",
-      "total_cases": 4850,
-      "total_events": 312000,
-      "total_hours": 1186.5,
-      "user_count": 38,
-      "top_apps": ["Teams", "New Outlook", "Chrome"]
-    },
-    {
-      "id": "coding-activities",
+      "id": "coding_activities",
       "name": "Coding Activities",
-      "total_cases": 2180,
-      "total_events": 178500,
-      "total_hours": 382.0,
-      "user_count": 22,
-      "top_apps": ["IntelliJ", "Code", "Chrome"]
-    },
-    {
-      "id": "youtrack-production",
-      "name": "Youtrack Production Process",
-      "total_cases": 1920,
-      "total_events": 145600,
-      "total_hours": 205.2,
-      "user_count": 28,
-      "top_apps": ["Youtrack", "Chrome", "Teams"]
-    },
-    {
-      "id": "youtrack-support",
-      "name": "Youtrack Support Process",
-      "total_cases": 340,
-      "total_events": 18900,
-      "total_hours": 5.5,
-      "user_count": 12,
-      "top_apps": ["Youtrack", "Teams", "Chrome"]
+      "case_count": 52,
+      "unique_users": 11,
+      "total_duration_hours": 15.18,
+      "avg_steps_per_case": 276.3,
+      "avg_apps_per_case": 10.2
     },
     {
       "id": "collector",
       "name": "Collector",
-      "total_cases": 3850,
-      "total_events": 198000,
-      "total_hours": 996.3,
-      "user_count": 44,
-      "top_apps": ["SearchHost", "Explorer", "Chrome"]
+      "case_count": 577,
+      "unique_users": 50,
+      "total_duration_hours": 167.77,
+      "avg_steps_per_case": 249.4,
+      "avg_apps_per_case": 6.9
     },
     {
-      "id": "unassigned",
+      "id": "communication",
+      "name": "Communication",
+      "case_count": 221,
+      "unique_users": 38,
+      "total_duration_hours": 135.19,
+      "avg_steps_per_case": 515.0,
+      "avg_apps_per_case": 14.9
+    },
+    {
+      "id": "unassigned_other",
       "name": "Unassigned/Other",
-      "total_cases": 1140,
-      "total_events": 39450,
-      "total_hours": 1650.7,
-      "user_count": 44,
-      "top_apps": ["Teams", "Chrome", "Excel"]
+      "case_count": 325,
+      "unique_users": 43,
+      "total_duration_hours": 348.52,
+      "avg_steps_per_case": 782.9,
+      "avg_apps_per_case": 17.7
+    },
+    {
+      "id": "youtrack_production_process",
+      "name": "Youtrack Production Process",
+      "case_count": 140,
+      "unique_users": 28,
+      "total_duration_hours": 40.84,
+      "avg_steps_per_case": 227.1,
+      "avg_apps_per_case": 10.9
     }
   ],
-  "top_applications": [
-    {"name": "Teams", "hours": 852.1},
-    {"name": "IntelliJ", "hours": 305.1},
-    {"name": "Chrome", "hours": 177.0},
-    {"name": "Youtrack", "hours": 162.5},
-    {"name": "Code", "hours": 148.7},
-    {"name": "New Outlook", "hours": 136.2},
-    {"name": "Excel", "hours": 108.3},
-    {"name": "Sharepoint", "hours": 87.4}
-  ]
+  "top_tools": [
+    {
+      "application": "Total",
+      "total_hours": 4426.15,
+      "active_hours": 3178.58
+    },
+    {
+      "application": "Teams",
+      "total_hours": 1186.49,
+      "active_hours": 852.1
+    },
+    {
+      "application": "IntelliJ",
+      "total_hours": 382.04,
+      "active_hours": 305.08
+    },
+    {
+      "application": "Chrome",
+      "total_hours": 239.28,
+      "active_hours": 176.99
+    },
+    {
+      "application": "Youtrack",
+      "total_hours": 196.15,
+      "active_hours": 139.38
+    },
+    {
+      "application": "New Outlook",
+      "total_hours": 157.87,
+      "active_hours": 130.08
+    },
+    {
+      "application": "Google Chrome",
+      "total_hours": 152.95,
+      "active_hours": 57.38
+    },
+    {
+      "application": "Code",
+      "total_hours": 149.4,
+      "active_hours": 122.39
+    },
+    {
+      "application": "Microsoft Edge",
+      "total_hours": 137.77,
+      "active_hours": 56.9
+    },
+    {
+      "application": "Figma",
+      "total_hours": 113.3,
+      "active_hours": 32.03
+    }
+  ],
+  "headcount_summary": {
+    "avg_measured": 32.5,
+    "avg_expected": 72.9
+  }
 }

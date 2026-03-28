@@ -1,98 +1,79 @@
 {
-  "request": {
-    "process_id": "communication",
-    "variant_id": null,
-    "include_descriptions": true
+  "input": {
+    "process_family": "Collector",
+    "selected_steps": [
+      "View Files",
+      "Use Teams Application",
+      "Use Google Chrome",
+      "Working on kyp-backend",
+      "Use Outlook Application",
+      "Build and develop local environment",
+      "Browsing in Chrome",
+      "IntelliJOcr"
+    ]
   },
-  "response": {
-    "process_id": "communication",
-    "process_name": "Communication",
-    "title": "Communication Workflow — Happy Path",
-    "description": "Automated workflow based on the most frequent communication variant: Teams messaging followed by a call and return to messaging. This workflow handles the standard communication flow with decision points for escalation and email follow-up.",
+  "output": {
+    "workflow_id": "wf-sample-001",
+    "name": "Collector Automation Workflow",
     "steps": [
       {
-        "id": "wf-start",
-        "type": "start",
-        "label": "Communication Initiated",
-        "description": "A communication workflow is triggered by an incoming message, meeting invite, or user action.",
-        "app": null,
-        "next_steps": ["wf-teams-open"],
-        "condition": null
+        "order": 1,
+        "name": "View Files",
+        "application": "Windows Explorer",
+        "action_type": "automated",
+        "estimated_duration_ms": 1962
       },
       {
-        "id": "wf-teams-open",
-        "type": "action",
-        "label": "Open Teams Application",
-        "description": "User opens or switches to Microsoft Teams to handle the communication.",
-        "app": "Teams",
-        "next_steps": ["wf-decide-call"],
-        "condition": null
+        "order": 2,
+        "name": "Use Teams Application",
+        "application": "Teams",
+        "action_type": "automated",
+        "estimated_duration_ms": 4999
       },
       {
-        "id": "wf-decide-call",
-        "type": "decision",
-        "label": "Requires live call?",
-        "description": "Determine if the communication requires a synchronous call or can be handled via chat/message.",
-        "app": null,
-        "next_steps": ["wf-teams-call", "wf-decide-email"],
-        "condition": null
+        "order": 3,
+        "name": "Use Google Chrome",
+        "application": "Google Chrome",
+        "action_type": "automated",
+        "estimated_duration_ms": 7765
       },
       {
-        "id": "wf-teams-call",
-        "type": "action",
-        "label": "Conduct Teams Call",
-        "description": "Initiate or join a Microsoft Teams call for real-time discussion.",
-        "app": "Teams",
-        "next_steps": ["wf-post-call"],
-        "condition": "Yes — call needed"
+        "order": 4,
+        "name": "Working on kyp-backend",
+        "application": "IntelliJ",
+        "action_type": "automated",
+        "estimated_duration_ms": 3332
       },
       {
-        "id": "wf-decide-email",
-        "type": "decision",
-        "label": "Requires email follow-up?",
-        "description": "Determine if an email summary or follow-up is needed.",
-        "app": null,
-        "next_steps": ["wf-outlook", "wf-teams-respond"],
-        "condition": "No — chat sufficient"
+        "order": 5,
+        "name": "Use Outlook Application",
+        "application": "New Outlook",
+        "action_type": "automated",
+        "estimated_duration_ms": 2756
       },
       {
-        "id": "wf-outlook",
-        "type": "action",
-        "label": "Compose Email in Outlook",
-        "description": "Draft and send an email via New Outlook with relevant context from Teams conversation.",
-        "app": "New Outlook",
-        "next_steps": ["wf-teams-respond"],
-        "condition": "Yes — email needed"
+        "order": 6,
+        "name": "Build and develop local environment",
+        "application": "Localhost",
+        "action_type": "automated",
+        "estimated_duration_ms": 4985
       },
       {
-        "id": "wf-teams-respond",
-        "type": "action",
-        "label": "Respond in Teams",
-        "description": "Send chat response or share update in the Teams channel.",
-        "app": "Teams",
-        "next_steps": ["wf-end"],
-        "condition": null
+        "order": 7,
+        "name": "Browsing in Chrome",
+        "application": "Chrome",
+        "action_type": "automated",
+        "estimated_duration_ms": 4754
       },
       {
-        "id": "wf-post-call",
-        "type": "action",
-        "label": "Post-Call Follow-up in Teams",
-        "description": "After the call, return to Teams to share notes, action items, or update the channel.",
-        "app": "Teams",
-        "next_steps": ["wf-end"],
-        "condition": null
-      },
-      {
-        "id": "wf-end",
-        "type": "end",
-        "label": "Communication Complete",
-        "description": "Communication workflow is finished.",
-        "app": null,
-        "next_steps": [],
-        "condition": null
+        "order": 8,
+        "name": "IntelliJOcr",
+        "application": "IntelliJ",
+        "action_type": "manual",
+        "estimated_duration_ms": 3997
       }
     ],
-    "generated_by": "deterministic",
-    "source_variant": "v-comm-01"
+    "estimated_savings_percent": 35,
+    "notes": "Generated from process mining data. Review automated steps for feasibility."
   }
 }

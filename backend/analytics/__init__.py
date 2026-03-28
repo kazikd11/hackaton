@@ -1,1 +1,1 @@
-# Backend analytics package
+# backend/analytics – shared analytics layer

@@ -1,202 +1,237 @@
 [
   {
-    "id": "opp-comm-sharepoint",
-    "process_id": "communication",
-    "process_name": "Communication",
-    "title": "Automate Sharepoint file copy-paste workflows",
-    "description": "Users are copying and pasting data between Sharepoint and other applications at extremely high rates (2.6 operations per session). This repetitive cross-app data transfer is a strong candidate for RPA integration.",
-    "score": 0.82,
+    "id": "opp-unassigned_other",
+    "process_family": "Unassigned/Other",
+    "rank": 1,
+    "score": 0.8938,
     "score_components": {
-      "manual_effort": 0.85,
-      "time_cost": 0.70,
-      "handoff": 0.90,
-      "repetition": 0.92,
-      "variance": 0.35,
-      "coverage_penalty": 0.12
+      "manual_effort": 1.0,
+      "time_cost": 1.0,
+      "handoff": 1.0,
+      "repetition": 1.0,
+      "variance": 0.4918,
+      "coverage_penalty": 0.5535
     },
-    "recommendation": "RPA/Integration",
-    "affected_steps": ["Working on shared files", "Use Teams Application", "Browsing in Chrome"],
-    "estimated_hours_saved": 18.5,
+    "raw_values": {
+      "manual_effort_raw": 2313.4585,
+      "time_cost_raw": 8.4868,
+      "handoff_raw": 17.7262,
+      "repetition_raw": 29.6496,
+      "variance_raw": 1.3864
+    },
+    "case_count": 325,
+    "step_occurrence_count": 254665,
+    "copy_paste_signals": 27140,
+    "context_switches": 158274,
     "evidence": [
-      "1153 copy operations in 450 sessions (2.6/session)",
-      "Cross-app paste detected in 36% of cases",
-      "20 distinct users performing same pattern",
-      "Consistent session duration suggests structured task"
+      {
+        "type": "copy_paste",
+        "step": "Use Teams Application",
+        "count": 4593
+      },
+      {
+        "type": "copy_paste",
+        "step": "Working on Excel Sheet",
+        "count": 1888
+      },
+      {
+        "type": "copy_paste",
+        "step": "Browsing in Chrome",
+        "count": 1762
+      },
+      {
+        "type": "context_switching",
+        "count": 158274,
+        "description": "158274 app-to-app transitions"
+      }
     ]
   },
   {
-    "id": "opp-comm-email-compose",
-    "process_id": "communication",
-    "process_name": "Communication",
-    "title": "Streamline email composition with templates and auto-fill",
-    "description": "Heavy manual text entry in New Outlook (7600 entries) combined with copy-paste from Chrome suggests users are manually composing emails with gathered information. Templates and auto-fill could reduce this effort.",
-    "score": 0.68,
+    "id": "opp-communication",
+    "process_family": "Communication",
+    "rank": 2,
+    "score": 0.5395,
     "score_components": {
-      "manual_effort": 0.78,
-      "time_cost": 0.62,
-      "handoff": 0.65,
-      "repetition": 0.58,
-      "variance": 0.50,
-      "coverage_penalty": 0.15
+      "manual_effort": 0.6393,
+      "time_cost": 0.5647,
+      "handoff": 0.74,
+      "repetition": 0.7591,
+      "variance": 0.0,
+      "coverage_penalty": 0.5535
     },
-    "recommendation": "Assistive copilot",
-    "affected_steps": ["Use New Outlook Application", "Browsing in Chrome"],
-    "estimated_hours_saved": 12.3,
+    "raw_values": {
+      "manual_effort_raw": 1715.8959,
+      "time_cost_raw": 7.2244,
+      "handoff_raw": 14.905,
+      "repetition_raw": 25.6536,
+      "variance_raw": 0.9884
+    },
+    "case_count": 221,
+    "step_occurrence_count": 113926,
+    "copy_paste_signals": 15161,
+    "context_switches": 71510,
     "evidence": [
-      "7600 text entries across 1800 Outlook sessions",
-      "650 copy-paste operations, 36% cross-app",
-      "Frequent Chrome->Outlook transition pattern",
-      "34 users affected"
+      {
+        "type": "copy_paste",
+        "step": "Use Teams Application",
+        "count": 3069
+      },
+      {
+        "type": "copy_paste",
+        "step": "Working on Excel Sheet",
+        "count": 1569
+      },
+      {
+        "type": "copy_paste",
+        "step": "Work on Presentation",
+        "count": 1412
+      },
+      {
+        "type": "context_switching",
+        "count": 71510,
+        "description": "71510 app-to-app transitions"
+      }
     ]
   },
   {
-    "id": "opp-comm-context-switch",
-    "process_id": "communication",
-    "process_name": "Communication",
-    "title": "Reduce Teams/Outlook/Chrome context switching",
-    "description": "Communication workflows show 8920 app context switches across 4850 cases. Users frequently bounce between Teams, Outlook, and Chrome, indicating fragmented information flow that could be unified.",
-    "score": 0.61,
+    "id": "opp-collector",
+    "process_family": "Collector",
+    "rank": 3,
+    "score": 0.3566,
     "score_components": {
-      "manual_effort": 0.55,
-      "time_cost": 0.72,
-      "handoff": 0.82,
-      "repetition": 0.40,
-      "variance": 0.60,
-      "coverage_penalty": 0.18
+      "manual_effort": 0.0332,
+      "time_cost": 0.7988,
+      "handoff": 0.0,
+      "repetition": 0.6816,
+      "variance": 1.0,
+      "coverage_penalty": 0.5535
     },
-    "recommendation": "Workflow automation",
-    "affected_steps": ["Use Teams Application", "Use New Outlook Application", "Browsing in Chrome"],
-    "estimated_hours_saved": 15.8,
+    "raw_values": {
+      "manual_effort_raw": 711.7938,
+      "time_cost_raw": 7.9034,
+      "handoff_raw": 6.8735,
+      "repetition_raw": 24.3674,
+      "variance_raw": 1.7977
+    },
+    "case_count": 577,
+    "step_occurrence_count": 144067,
+    "copy_paste_signals": 12865,
+    "context_switches": 81208,
     "evidence": [
-      "8920 app switches across 4850 cases (1.8/case)",
-      "Teams is both entry and exit point in 68% of variants",
-      "3-app round-trips observed in 23% of sessions",
-      "38 users affected"
+      {
+        "type": "copy_paste",
+        "step": "Working on kyp-backend",
+        "count": 1582
+      },
+      {
+        "type": "copy_paste",
+        "step": "Use Teams Application",
+        "count": 1031
+      },
+      {
+        "type": "copy_paste",
+        "step": "Use Google Chrome",
+        "count": 903
+      },
+      {
+        "type": "context_switching",
+        "count": 81208,
+        "description": "81208 app-to-app transitions"
+      }
     ]
   },
   {
-    "id": "opp-coding-copypaste",
-    "process_id": "coding-activities",
-    "process_name": "Coding Activities",
-    "title": "Reduce repetitive code copy-paste across IDE sessions",
-    "description": "IntelliJ and VS Code show 3284 copy-paste operations, with 1459 occurring within kyp-backend alone. This suggests boilerplate code patterns that could be templated or generated.",
-    "score": 0.74,
+    "id": "opp-coding_activities",
+    "process_family": "Coding Activities",
+    "rank": 4,
+    "score": 0.2347,
     "score_components": {
-      "manual_effort": 0.80,
-      "time_cost": 0.65,
-      "handoff": 0.45,
-      "repetition": 0.88,
-      "variance": 0.52,
-      "coverage_penalty": 0.10
+      "manual_effort": 0.2731,
+      "time_cost": 0.3196,
+      "handoff": 0.3076,
+      "repetition": 0.4259,
+      "variance": 0.0277,
+      "coverage_penalty": 0.5535
     },
-    "recommendation": "Assistive copilot",
-    "affected_steps": ["Working on kyp-backend", "Working on kyp-frontend", "Code Review"],
-    "estimated_hours_saved": 10.2,
+    "raw_values": {
+      "manual_effort_raw": 1109.3077,
+      "time_cost_raw": 6.5135,
+      "handoff_raw": 10.2115,
+      "repetition_raw": 20.1261,
+      "variance_raw": 1.0108
+    },
+    "case_count": 52,
+    "step_occurrence_count": 14379,
+    "copy_paste_signals": 2958,
+    "context_switches": 6075,
     "evidence": [
-      "1459 copy-paste ops in kyp-backend alone",
-      "3284 total IDE copy-paste operations",
-      "22 developers affected",
-      "Consistent patterns suggest boilerplate reuse"
+      {
+        "type": "copy_paste",
+        "step": "Working on kyp-backend",
+        "count": 1851
+      },
+      {
+        "type": "copy_paste",
+        "step": "Working on qa-admin",
+        "count": 183
+      },
+      {
+        "type": "copy_paste",
+        "step": "Create notes",
+        "count": 146
+      },
+      {
+        "type": "context_switching",
+        "count": 6075,
+        "description": "6075 app-to-app transitions"
+      }
     ]
   },
   {
-    "id": "opp-youtrack-triage",
-    "process_id": "youtrack-production",
-    "process_name": "Youtrack Production Process",
-    "title": "Automate production issue triage and routing",
-    "description": "Production issue handling shows 14 variants with significant time in Youtrack-to-browser-to-Teams transitions. Issue triage and routing follows a predictable pattern that can be automated.",
-    "score": 0.72,
+    "id": "opp-youtrack_production_process",
+    "process_family": "Youtrack Production Process",
+    "rank": 5,
+    "score": 0.0675,
     "score_components": {
-      "manual_effort": 0.70,
-      "time_cost": 0.68,
-      "handoff": 0.78,
-      "repetition": 0.72,
-      "variance": 0.42,
-      "coverage_penalty": 0.08
+      "manual_effort": 0.0,
+      "time_cost": 0.0,
+      "handoff": 0.3671,
+      "repetition": 0.0,
+      "variance": 0.4944,
+      "coverage_penalty": 0.5535
     },
-    "recommendation": "Workflow automation",
-    "affected_steps": ["Working on Youtrack Issue", "Browsing in Chrome", "Use Teams Application"],
-    "estimated_hours_saved": 8.5,
-    "evidence": [
-      "4290 app switches across 1920 cases",
-      "Youtrack->Chrome->Teams detected as repeating pattern",
-      "28 users with consistent triage flow",
-      "Average case duration 6.4 minutes"
-    ]
-  },
-  {
-    "id": "opp-collector-search",
-    "process_id": "collector",
-    "process_name": "Collector",
-    "title": "Consolidate search and file browsing patterns",
-    "description": "Collector processes show 12400 app switches across 3850 cases with heavy SearchHost and Explorer usage. Users are manually navigating and searching for information across multiple tools.",
-    "score": 0.58,
-    "score_components": {
-      "manual_effort": 0.60,
-      "time_cost": 0.58,
-      "handoff": 0.72,
-      "repetition": 0.45,
-      "variance": 0.68,
-      "coverage_penalty": 0.22
+    "raw_values": {
+      "manual_effort_raw": 656.8143,
+      "time_cost_raw": 5.5866,
+      "handoff_raw": 10.8571,
+      "repetition_raw": 13.06,
+      "variance_raw": 1.3885
     },
-    "recommendation": "Workflow automation",
-    "affected_steps": ["Use SearchHost", "Browse Files", "Working on Excel Sheet"],
-    "estimated_hours_saved": 14.2,
+    "case_count": 140,
+    "step_occurrence_count": 31822,
+    "copy_paste_signals": 3351,
+    "context_switches": 17142,
     "evidence": [
-      "12400 app switches (3.2/case) — highest rate",
-      "32 variants indicate complex, unstructured flow",
-      "44 users all performing similar search patterns",
-      "Search->Browse->Excel is most common 3-step sequence"
-    ]
-  },
-  {
-    "id": "opp-youtrack-support",
-    "process_id": "youtrack-support",
-    "process_name": "Youtrack Support Process",
-    "title": "Monitor support ticket patterns for future automation",
-    "description": "Support process has low volume (340 cases) but shows consistent patterns. Currently best monitored for growth before investing in automation.",
-    "score": 0.32,
-    "score_components": {
-      "manual_effort": 0.40,
-      "time_cost": 0.25,
-      "handoff": 0.35,
-      "repetition": 0.50,
-      "variance": 0.20,
-      "coverage_penalty": 0.30
-    },
-    "recommendation": "Monitor only",
-    "affected_steps": ["Working on Support Ticket", "Use Teams Application"],
-    "estimated_hours_saved": 1.2,
-    "evidence": [
-      "Only 340 cases in observation period",
-      "12 users, low volume per user",
-      "6 variants — relatively stable process",
-      "Low overall time cost (5.5 hours total)"
-    ]
-  },
-  {
-    "id": "opp-unassigned-excel",
-    "process_id": "unassigned",
-    "process_name": "Unassigned/Other",
-    "title": "Investigate and classify unassigned Excel workflows",
-    "description": "Unassigned activities include significant Excel usage with copy-paste patterns that may represent undiscovered automation opportunities once properly classified.",
-    "score": 0.45,
-    "score_components": {
-      "manual_effort": 0.55,
-      "time_cost": 0.50,
-      "handoff": 0.40,
-      "repetition": 0.35,
-      "variance": 0.72,
-      "coverage_penalty": 0.35
-    },
-    "recommendation": "Monitor only",
-    "affected_steps": ["Working on Excel Sheet", "Browsing in Chrome", "Use Teams Application"],
-    "estimated_hours_saved": 5.0,
-    "evidence": [
-      "1140 cases without process classification",
-      "45 variants — highly variable, unstructured",
-      "1650.7 total hours — significant time investment",
-      "High coverage penalty due to classification uncertainty"
+      {
+        "type": "copy_paste",
+        "step": "Check and use interface design",
+        "count": 592
+      },
+      {
+        "type": "copy_paste",
+        "step": "Working on shared files",
+        "count": 307
+      },
+      {
+        "type": "copy_paste",
+        "step": "Working on Excel Sheet",
+        "count": 273
+      },
+      {
+        "type": "context_switching",
+        "count": 17142,
+        "description": "17142 app-to-app transitions"
+      }
     ]
   }
 ]
