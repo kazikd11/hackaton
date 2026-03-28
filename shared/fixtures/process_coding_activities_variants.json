@@ -1,0 +1,72 @@
+{
+  "process_id": "coding-activities",
+  "process_name": "Coding Activities",
+  "total_cases": 2180,
+  "variant_count": 24,
+  "happy_path": "v-code-01",
+  "variants": [
+    {
+      "variant_id": "v-code-01",
+      "steps": ["Working on kyp-backend", "Browsing in Chrome", "Working on kyp-backend"],
+      "frequency": 580,
+      "avg_duration_ms": 1200000,
+      "percentage": 26.6
+    },
+    {
+      "variant_id": "v-code-02",
+      "steps": ["Working on kyp-frontend", "Browsing in Chrome", "Working on kyp-frontend"],
+      "frequency": 420,
+      "avg_duration_ms": 960000,
+      "percentage": 19.3
+    },
+    {
+      "variant_id": "v-code-03",
+      "steps": ["Working on kyp-backend", "Code Review", "Working on kyp-backend"],
+      "frequency": 310,
+      "avg_duration_ms": 840000,
+      "percentage": 14.2
+    },
+    {
+      "variant_id": "v-code-04",
+      "steps": ["Working on kyp-backend", "Use Teams Application", "Working on kyp-backend"],
+      "frequency": 240,
+      "avg_duration_ms": 720000,
+      "percentage": 11.0
+    },
+    {
+      "variant_id": "v-code-05",
+      "steps": ["Working on kyp-frontend", "Working on kyp-backend", "Browsing in Chrome"],
+      "frequency": 180,
+      "avg_duration_ms": 1080000,
+      "percentage": 8.3
+    },
+    {
+      "variant_id": "v-code-06",
+      "steps": ["Code Review", "Working on kyp-backend", "Browsing in Chrome", "Working on kyp-backend"],
+      "frequency": 150,
+      "avg_duration_ms": 1440000,
+      "percentage": 6.9
+    },
+    {
+      "variant_id": "v-code-07",
+      "steps": ["Working on kyp-backend", "Working on kyp-frontend", "Working on kyp-backend"],
+      "frequency": 120,
+      "avg_duration_ms": 900000,
+      "percentage": 5.5
+    },
+    {
+      "variant_id": "v-code-08",
+      "steps": ["Browsing in Chrome", "Working on kyp-backend"],
+      "frequency": 100,
+      "avg_duration_ms": 600000,
+      "percentage": 4.6
+    },
+    {
+      "variant_id": "v-code-09",
+      "steps": ["Working on kyp-backend", "Use Teams Application", "Browsing in Chrome", "Working on kyp-backend"],
+      "frequency": 80,
+      "avg_duration_ms": 1560000,
+      "percentage": 3.7
+    }
+  ]
+}

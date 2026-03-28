@@ -1,0 +1,114 @@
+[
+  {
+    "step_name": "Working on kyp-backend",
+    "app": "IntelliJ",
+    "frequency": 1800,
+    "avg_duration_ms": 720000,
+    "total_duration_ms": 1296000000,
+    "user_count": 20,
+    "click_count": 32400,
+    "text_entry_count": 54000,
+    "copy_count": 1459,
+    "paste_count": 1380,
+    "automation_signals": [
+      {
+        "signal_type": "copy_paste",
+        "description": "Extremely high copy-paste volume within the same IDE project suggests boilerplate code reuse",
+        "severity": "high",
+        "evidence": "1459 copy + 1380 paste = 2839 ops in 1800 sessions"
+      },
+      {
+        "signal_type": "high_duration",
+        "description": "Long coding sessions averaging 12 minutes indicate deep work blocks",
+        "severity": "low",
+        "evidence": "720s avg duration, expected for development"
+      }
+    ]
+  },
+  {
+    "step_name": "Working on kyp-frontend",
+    "app": "Code",
+    "frequency": 980,
+    "avg_duration_ms": 540000,
+    "total_duration_ms": 529200000,
+    "user_count": 15,
+    "click_count": 14700,
+    "text_entry_count": 29400,
+    "copy_count": 680,
+    "paste_count": 620,
+    "automation_signals": [
+      {
+        "signal_type": "copy_paste",
+        "description": "Moderate copy-paste rate in frontend development, consistent with component duplication",
+        "severity": "medium",
+        "evidence": "1300 copy-paste ops in 980 sessions (1.3/session)"
+      }
+    ]
+  },
+  {
+    "step_name": "Code Review",
+    "app": "Chrome",
+    "frequency": 460,
+    "avg_duration_ms": 300000,
+    "total_duration_ms": 138000000,
+    "user_count": 18,
+    "click_count": 4600,
+    "text_entry_count": 2300,
+    "copy_count": 230,
+    "paste_count": 180,
+    "automation_signals": [
+      {
+        "signal_type": "app_switch",
+        "description": "Code review triggers transitions back to IDE for fixes in 67% of cases",
+        "severity": "medium",
+        "evidence": "310 out of 460 reviews lead to kyp-backend edits"
+      }
+    ]
+  },
+  {
+    "step_name": "Browsing in Chrome",
+    "app": "Chrome",
+    "frequency": 1100,
+    "avg_duration_ms": 180000,
+    "total_duration_ms": 198000000,
+    "user_count": 22,
+    "click_count": 8800,
+    "text_entry_count": 4400,
+    "copy_count": 850,
+    "paste_count": 720,
+    "automation_signals": [
+      {
+        "signal_type": "copy_paste",
+        "description": "High copy-paste from Chrome to IDE — developers copying code snippets and documentation",
+        "severity": "high",
+        "evidence": "1570 copy-paste ops, majority cross-app to IDE"
+      },
+      {
+        "signal_type": "app_switch",
+        "description": "Browser used as frequent lookup tool with immediate return to IDE",
+        "severity": "medium",
+        "evidence": "1000 transitions back to IDE from Chrome"
+      }
+    ]
+  },
+  {
+    "step_name": "Use Teams Application",
+    "app": "Teams",
+    "frequency": 320,
+    "avg_duration_ms": 120000,
+    "total_duration_ms": 38400000,
+    "user_count": 20,
+    "click_count": 1600,
+    "text_entry_count": 960,
+    "copy_count": 65,
+    "paste_count": 50,
+    "automation_signals": [
+      {
+        "signal_type": "app_switch",
+        "description": "Teams used for quick discussions before returning to coding, indicating context switches",
+        "severity": "low",
+        "evidence": "240 of 320 sessions return to kyp-backend within 2 minutes"
+      }
+    ]
+  }
+]

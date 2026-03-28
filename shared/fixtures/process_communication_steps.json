@@ -1,0 +1,146 @@
+[
+  {
+    "step_name": "Use Teams Application",
+    "app": "Teams",
+    "frequency": 4200,
+    "avg_duration_ms": 180000,
+    "total_duration_ms": 756000000,
+    "user_count": 38,
+    "click_count": 18500,
+    "text_entry_count": 12800,
+    "copy_count": 420,
+    "paste_count": 380,
+    "automation_signals": [
+      {
+        "signal_type": "high_duration",
+        "description": "Average session is 3 minutes with high click density indicating manual navigation overhead",
+        "severity": "medium",
+        "evidence": "180s avg with 4.4 clicks/session"
+      },
+      {
+        "signal_type": "app_switch",
+        "description": "Frequent transitions to Outlook (1450x) and Chrome (680x) suggest context switching during messaging",
+        "severity": "high",
+        "evidence": "2130 outbound switches to other apps"
+      }
+    ]
+  },
+  {
+    "step_name": "Call - Microsoft Teams",
+    "app": "Teams",
+    "frequency": 2100,
+    "avg_duration_ms": 420000,
+    "total_duration_ms": 882000000,
+    "user_count": 32,
+    "click_count": 4200,
+    "text_entry_count": 1200,
+    "copy_count": 85,
+    "paste_count": 90,
+    "automation_signals": [
+      {
+        "signal_type": "high_duration",
+        "description": "Long call sessions averaging 7 minutes indicate synchronous meeting overhead",
+        "severity": "medium",
+        "evidence": "420s avg duration, 32 distinct users"
+      }
+    ]
+  },
+  {
+    "step_name": "Use New Outlook Application",
+    "app": "New Outlook",
+    "frequency": 1800,
+    "avg_duration_ms": 120000,
+    "total_duration_ms": 216000000,
+    "user_count": 34,
+    "click_count": 9200,
+    "text_entry_count": 7600,
+    "copy_count": 340,
+    "paste_count": 310,
+    "automation_signals": [
+      {
+        "signal_type": "copy_paste",
+        "description": "High copy-paste volume between Outlook and other apps indicates manual data transfer",
+        "severity": "high",
+        "evidence": "650 copy-paste ops, 36% cross-app"
+      },
+      {
+        "signal_type": "manual_entry",
+        "description": "Heavy text entry suggests manual email composition rather than template use",
+        "severity": "medium",
+        "evidence": "7600 text entries across 1800 sessions"
+      }
+    ]
+  },
+  {
+    "step_name": "Browsing in Chrome",
+    "app": "Chrome",
+    "frequency": 1200,
+    "avg_duration_ms": 90000,
+    "total_duration_ms": 108000000,
+    "user_count": 36,
+    "click_count": 6800,
+    "text_entry_count": 3200,
+    "copy_count": 850,
+    "paste_count": 720,
+    "automation_signals": [
+      {
+        "signal_type": "copy_paste",
+        "description": "Highest copy-paste rate per session across all communication steps — data gathered from web then pasted elsewhere",
+        "severity": "high",
+        "evidence": "1570 copy-paste ops in 1200 sessions = 1.3/session"
+      },
+      {
+        "signal_type": "app_switch",
+        "description": "Browser used as information lookup followed by immediate app switch",
+        "severity": "medium",
+        "evidence": "1000 outbound switches vs 530 inbound"
+      }
+    ]
+  },
+  {
+    "step_name": "Use Google Meet",
+    "app": "Google Meet",
+    "frequency": 280,
+    "avg_duration_ms": 360000,
+    "total_duration_ms": 100800000,
+    "user_count": 14,
+    "click_count": 560,
+    "text_entry_count": 180,
+    "copy_count": 20,
+    "paste_count": 15,
+    "automation_signals": [
+      {
+        "signal_type": "high_duration",
+        "description": "6-minute average sessions for external meetings",
+        "severity": "low",
+        "evidence": "360s avg, 14 users"
+      }
+    ]
+  },
+  {
+    "step_name": "Working on shared files",
+    "app": "Sharepoint",
+    "frequency": 450,
+    "avg_duration_ms": 150000,
+    "total_duration_ms": 67500000,
+    "user_count": 20,
+    "click_count": 2700,
+    "text_entry_count": 1800,
+    "copy_count": 1153,
+    "paste_count": 1080,
+    "automation_signals": [
+      {
+        "signal_type": "copy_paste",
+        "description": "Extremely high copy-paste volume — most copy-paste in the entire dataset originates from Sharepoint file operations",
+        "severity": "high",
+        "evidence": "1153 copy ops in 450 sessions = 2.6/session"
+      },
+      {
+        "signal_type": "high_repetition",
+        "description": "Same file operations repeated across multiple users with consistent patterns",
+        "severity": "high",
+        "evidence": "20 users, consistent 150s avg sessions"
+      }
+    ]
+  }
+]

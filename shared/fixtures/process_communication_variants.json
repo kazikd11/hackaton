@@ -1,0 +1,79 @@
+{
+  "process_id": "communication",
+  "process_name": "Communication",
+  "total_cases": 4850,
+  "variant_count": 18,
+  "happy_path": "v-comm-01",
+  "variants": [
+    {
+      "variant_id": "v-comm-01",
+      "steps": ["Use Teams Application", "Call - Microsoft Teams", "Use Teams Application"],
+      "frequency": 1650,
+      "avg_duration_ms": 720000,
+      "percentage": 34.0
+    },
+    {
+      "variant_id": "v-comm-02",
+      "steps": ["Use Teams Application", "Use New Outlook Application", "Use Teams Application"],
+      "frequency": 920,
+      "avg_duration_ms": 540000,
+      "percentage": 19.0
+    },
+    {
+      "variant_id": "v-comm-03",
+      "steps": ["Use New Outlook Application", "Browsing in Chrome", "Use Teams Application"],
+      "frequency": 680,
+      "avg_duration_ms": 480000,
+      "percentage": 14.0
+    },
+    {
+      "variant_id": "v-comm-04",
+      "steps": ["Use Teams Application", "Call - Microsoft Teams", "Use New Outlook Application", "Use Teams Application"],
+      "frequency": 450,
+      "avg_duration_ms": 960000,
+      "percentage": 9.3
+    },
+    {
+      "variant_id": "v-comm-05",
+      "steps": ["Use New Outlook Application", "Use Teams Application", "Browsing in Chrome", "Use New Outlook Application"],
+      "frequency": 340,
+      "avg_duration_ms": 840000,
+      "percentage": 7.0
+    },
+    {
+      "variant_id": "v-comm-06",
+      "steps": ["Use Teams Application", "Use Google Meet", "Use Teams Application", "Use New Outlook Application"],
+      "frequency": 280,
+      "avg_duration_ms": 1080000,
+      "percentage": 5.8
+    },
+    {
+      "variant_id": "v-comm-07",
+      "steps": ["Browsing in Chrome", "Use Teams Application"],
+      "frequency": 210,
+      "avg_duration_ms": 360000,
+      "percentage": 4.3
+    },
+    {
+      "variant_id": "v-comm-08",
+      "steps": ["Use Teams Application", "Use New Outlook Application", "Browsing in Chrome", "Use Teams Application", "Call - Microsoft Teams"],
+      "frequency": 150,
+      "avg_duration_ms": 1320000,
+      "percentage": 3.1
+    },
+    {
+      "variant_id": "v-comm-09",
+      "steps": ["Use New Outlook Application", "Use Teams Application", "Call - Microsoft Teams", "Use New Outlook Application"],
+      "frequency": 95,
+      "avg_duration_ms": 900000,
+      "percentage": 2.0
+    },
+    {
+      "variant_id": "v-comm-10",
+      "steps": ["Use Teams Application", "Working on shared files", "Use Teams Application"],
+      "frequency": 75,
+      "avg_duration_ms": 600000,
+      "percentage": 1.5
+    }
+  ]
+}

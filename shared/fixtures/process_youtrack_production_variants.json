@@ -1,0 +1,65 @@
+{
+  "process_id": "youtrack-production",
+  "process_name": "Youtrack Production Process",
+  "total_cases": 1920,
+  "variant_count": 14,
+  "happy_path": "v-yt-01",
+  "variants": [
+    {
+      "variant_id": "v-yt-01",
+      "steps": ["Working on Youtrack Issue", "Browsing in Chrome", "Working on Youtrack Issue"],
+      "frequency": 520,
+      "avg_duration_ms": 480000,
+      "percentage": 27.1
+    },
+    {
+      "variant_id": "v-yt-02",
+      "steps": ["Working on Youtrack Issue", "Use Teams Application", "Working on Youtrack Issue"],
+      "frequency": 380,
+      "avg_duration_ms": 360000,
+      "percentage": 19.8
+    },
+    {
+      "variant_id": "v-yt-03",
+      "steps": ["Working on Youtrack Issue", "Working on kyp-backend", "Working on Youtrack Issue"],
+      "frequency": 290,
+      "avg_duration_ms": 540000,
+      "percentage": 15.1
+    },
+    {
+      "variant_id": "v-yt-04",
+      "steps": ["Working on Youtrack Issue", "Browsing in Chrome", "Use Teams Application", "Working on Youtrack Issue"],
+      "frequency": 220,
+      "avg_duration_ms": 720000,
+      "percentage": 11.5
+    },
+    {
+      "variant_id": "v-yt-05",
+      "steps": ["Working on Youtrack Issue", "Use Teams Application", "Browsing in Chrome", "Working on kyp-backend"],
+      "frequency": 180,
+      "avg_duration_ms": 840000,
+      "percentage": 9.4
+    },
+    {
+      "variant_id": "v-yt-06",
+      "steps": ["Browsing in Chrome", "Working on Youtrack Issue"],
+      "frequency": 150,
+      "avg_duration_ms": 300000,
+      "percentage": 7.8
+    },
+    {
+      "variant_id": "v-yt-07",
+      "steps": ["Working on Youtrack Issue", "Working on kyp-backend", "Use Teams Application", "Working on Youtrack Issue"],
+      "frequency": 100,
+      "avg_duration_ms": 960000,
+      "percentage": 5.2
+    },
+    {
+      "variant_id": "v-yt-08",
+      "steps": ["Use Teams Application", "Working on Youtrack Issue", "Working on kyp-backend"],
+      "frequency": 80,
+      "avg_duration_ms": 600000,
+      "percentage": 4.2
+    }
+  ]
+}

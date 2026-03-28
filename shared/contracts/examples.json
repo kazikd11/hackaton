@@ -1,0 +1,155 @@
+{
+  "_description": "Example payloads for each major API endpoint. These serve as the contract reference for frontend development.",
+  
+  "GET /overview": {
+    "total_processes": 6,
+    "total_cases": 14280,
+    "total_events": 892450,
+    "total_hours": 4426.2,
+    "total_users": 44,
+    "observation_period": "2026-03-01 to 2026-03-20",
+    "process_families": [
+      {
+        "id": "communication",
+        "name": "Communication",
+        "total_cases": 4850,
+        "total_events": 312000,
+        "total_hours": 1186.5,
+        "user_count": 38,
+        "top_apps": ["Teams", "New Outlook", "Chrome"]
+      }
+    ],
+    "top_applications": [
+      {"name": "Teams", "hours": 852.1}
+    ]
+  },
+
+  "GET /processes": [
+    {
+      "id": "communication",
+      "name": "Communication",
+      "description": "Cross-team messaging, email handling, and meeting coordination.",
+      "total_cases": 4850,
+      "total_events": 312000,
+      "total_hours": 1186.5,
+      "active_hours": 852.1,
+      "passive_hours": 334.4,
+      "user_count": 38,
+      "avg_case_duration_ms": 880200,
+      "top_apps": ["Teams", "New Outlook", "Chrome"],
+      "top_steps": ["Use Teams Application", "Call - Microsoft Teams"],
+      "variant_count": 18,
+      "copy_paste_count": 2450,
+      "app_switch_count": 8920
+    }
+  ],
+
+  "GET /processes/{id}/variants": {
+    "process_id": "communication",
+    "process_name": "Communication",
+    "total_cases": 4850,
+    "variant_count": 18,
+    "happy_path": "v-comm-01",
+    "variants": [
+      {
+        "variant_id": "v-comm-01",
+        "steps": ["Use Teams Application", "Call - Microsoft Teams", "Use Teams Application"],
+        "frequency": 1650,
+        "avg_duration_ms": 720000,
+        "percentage": 34.0
+      }
+    ]
+  },
+
+  "GET /processes/{id}/graph": {
+    "process_id": "communication",
+    "process_name": "Communication",
+    "nodes": [
+      {"id": "teams-use", "label": "Use Teams Application", "app": "Teams", "avg_duration_ms": 180000, "frequency": 4200, "type": "step"}
+    ],
+    "edges": [
+      {"source": "start", "target": "teams-use", "frequency": 3200}
+    ]
+  },
+
+  "GET /processes/{id}/steps": [
+    {
+      "step_name": "Use Teams Application",
+      "app": "Teams",
+      "frequency": 4200,
+      "avg_duration_ms": 180000,
+      "total_duration_ms": 756000000,
+      "user_count": 38,
+      "click_count": 18500,
+      "text_entry_count": 12800,
+      "copy_count": 420,
+      "paste_count": 380,
+      "automation_signals": [
+        {
+          "signal_type": "app_switch",
+          "description": "Frequent transitions to Outlook and Chrome suggest context switching",
+          "severity": "high",
+          "evidence": "2130 outbound switches"
+        }
+      ]
+    }
+  ],
+
+  "GET /opportunities": [
+    {
+      "id": "opp-comm-sharepoint",
+      "process_id": "communication",
+      "process_name": "Communication",
+      "title": "Automate Sharepoint file copy-paste workflows",
+      "description": "Users are copying and pasting data at extremely high rates.",
+      "score": 0.82,
+      "score_components": {
+        "manual_effort": 0.85,
+        "time_cost": 0.70,
+        "handoff": 0.90,
+        "repetition": 0.92,
+        "variance": 0.35,
+        "coverage_penalty": 0.12
+      },
+      "recommendation": "RPA/Integration",
+      "affected_steps": ["Working on shared files", "Use Teams Application"],
+      "estimated_hours_saved": 18.5,
+      "evidence": ["1153 copy operations in 450 sessions"]
+    }
+  ],
+
+  "POST /workflow/generate (request)": {
+    "process_id": "communication",
+    "variant_id": null,
+    "include_descriptions": true
+  },
+
+  "POST /workflow/generate (response)": {
+    "process_id": "communication",
+    "process_name": "Communication",
+    "title": "Communication Workflow — Happy Path",
+    "description": "Automated workflow based on the most frequent variant.",
+    "steps": [
+      {"id": "wf-start", "type": "start", "label": "Communication Started", "description": "Workflow begins.", "app": null, "next_steps": ["wf-step-0"], "condition": null},
+      {"id": "wf-step-0", "type": "action", "label": "Use Teams Application", "description": "Open Teams.", "app": "Teams", "next_steps": ["wf-step-1"], "condition": null},
+      {"id": "wf-end", "type": "end", "label": "Communication Complete", "app": null, "next_steps": [], "condition": null}
+    ],
+    "generated_by": "deterministic",
+    "source_variant": "v-comm-01"
+  },
+
+  "POST /copilot/explain (request)": {
+    "context": "communication",
+    "question": "Why is this a good automation candidate?",
+    "include_evidence": true
+  },
+
+  "POST /copilot/explain (response)": {
+    "question": "Why is this a good automation candidate?",
+    "answer": "The Communication process covers 4,850 cases with high copy-paste and context switching rates.",
+    "evidence": ["4,850 total cases observed", "38 distinct users"],
+    "generated_by": "deterministic",
+    "process_id": "communication",
+    "confidence": 0.85
+  }
+}

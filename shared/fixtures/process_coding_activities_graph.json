@@ -1,0 +1,35 @@
+{
+  "process_id": "coding-activities",
+  "process_name": "Coding Activities",
+  "nodes": [
+    {"id": "start", "label": "Start", "type": "start"},
+    {"id": "kyp-backend", "label": "Working on kyp-backend", "app": "IntelliJ", "avg_duration_ms": 720000, "frequency": 1800, "type": "step"},
+    {"id": "kyp-frontend", "label": "Working on kyp-frontend", "app": "Code", "avg_duration_ms": 540000, "frequency": 980, "type": "step"},
+    {"id": "code-review", "label": "Code Review", "app": "Chrome", "avg_duration_ms": 300000, "frequency": 460, "type": "step"},
+    {"id": "chrome", "label": "Browsing in Chrome", "app": "Chrome", "avg_duration_ms": 180000, "frequency": 1100, "type": "step"},
+    {"id": "teams", "label": "Use Teams Application", "app": "Teams", "avg_duration_ms": 120000, "frequency": 320, "type": "step"},
+    {"id": "end", "label": "End", "type": "end"}
+  ],
+  "edges": [
+    {"source": "start", "target": "kyp-backend", "frequency": 1200},
+    {"source": "start", "target": "kyp-frontend", "frequency": 600},
+    {"source": "start", "target": "chrome", "frequency": 280},
+    {"source": "start", "target": "code-review", "frequency": 100},
+    {"source": "kyp-backend", "target": "chrome", "frequency": 780, "label": "lookup/research"},
+    {"source": "kyp-backend", "target": "code-review", "frequency": 310},
+    {"source": "kyp-backend", "target": "teams", "frequency": 240, "label": "discuss"},
+    {"source": "kyp-backend", "target": "kyp-frontend", "frequency": 180},
+    {"source": "kyp-backend", "target": "end", "frequency": 290},
+    {"source": "kyp-frontend", "target": "chrome", "frequency": 420},
+    {"source": "kyp-frontend", "target": "kyp-backend", "frequency": 240},
+    {"source": "kyp-frontend", "target": "end", "frequency": 320},
+    {"source": "code-review", "target": "kyp-backend", "frequency": 310},
+    {"source": "code-review", "target": "chrome", "frequency": 100},
+    {"source": "code-review", "target": "end", "frequency": 50},
+    {"source": "chrome", "target": "kyp-backend", "frequency": 680},
+    {"source": "chrome", "target": "kyp-frontend", "frequency": 320},
+    {"source": "chrome", "target": "end", "frequency": 100},
+    {"source": "teams", "target": "kyp-backend", "frequency": 240},
+    {"source": "teams", "target": "end", "frequency": 80}
+  ]
+}

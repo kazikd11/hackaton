@@ -1,0 +1,98 @@
+{
+  "request": {
+    "process_id": "communication",
+    "variant_id": null,
+    "include_descriptions": true
+  },
+  "response": {
+    "process_id": "communication",
+    "process_name": "Communication",
+    "title": "Communication Workflow — Happy Path",
+    "description": "Automated workflow based on the most frequent communication variant: Teams messaging followed by a call and return to messaging. This workflow handles the standard communication flow with decision points for escalation and email follow-up.",
+    "steps": [
+      {
+        "id": "wf-start",
+        "type": "start",
+        "label": "Communication Initiated",
+        "description": "A communication workflow is triggered by an incoming message, meeting invite, or user action.",
+        "app": null,
+        "next_steps": ["wf-teams-open"],
+        "condition": null
+      },
+      {
+        "id": "wf-teams-open",
+        "type": "action",
+        "label": "Open Teams Application",
+        "description": "User opens or switches to Microsoft Teams to handle the communication.",
+        "app": "Teams",
+        "next_steps": ["wf-decide-call"],
+        "condition": null
+      },
+      {
+        "id": "wf-decide-call",
+        "type": "decision",
+        "label": "Requires live call?",
+        "description": "Determine if the communication requires a synchronous call or can be handled via chat/message.",
+        "app": null,
+        "next_steps": ["wf-teams-call", "wf-decide-email"],
+        "condition": null
+      },
+      {
+        "id": "wf-teams-call",
+        "type": "action",
+        "label": "Conduct Teams Call",
+        "description": "Initiate or join a Microsoft Teams call for real-time discussion.",
+        "app": "Teams",
+        "next_steps": ["wf-post-call"],
+        "condition": "Yes — call needed"
+      },
+      {
+        "id": "wf-decide-email",
+        "type": "decision",
+        "label": "Requires email follow-up?",
+        "description": "Determine if an email summary or follow-up is needed.",
+        "app": null,
+        "next_steps": ["wf-outlook", "wf-teams-respond"],
+        "condition": "No — chat sufficient"
+      },
+      {
+        "id": "wf-outlook",
+        "type": "action",
+        "label": "Compose Email in Outlook",
+        "description": "Draft and send an email via New Outlook with relevant context from Teams conversation.",
+        "app": "New Outlook",
+        "next_steps": ["wf-teams-respond"],
+        "condition": "Yes — email needed"
+      },
+      {
+        "id": "wf-teams-respond",
+        "type": "action",
+        "label": "Respond in Teams",
+        "description": "Send chat response or share update in the Teams channel.",
+        "app": "Teams",
+        "next_steps": ["wf-end"],
+        "condition": null
+      },
+      {
+        "id": "wf-post-call",
+        "type": "action",
+        "label": "Post-Call Follow-up in Teams",
+        "description": "After the call, return to Teams to share notes, action items, or update the channel.",
+        "app": "Teams",
+        "next_steps": ["wf-end"],
+        "condition": null
+      },
+      {
+        "id": "wf-end",
+        "type": "end",
+        "label": "Communication Complete",
+        "description": "Communication workflow is finished.",
+        "app": null,
+        "next_steps": [],
+        "condition": null
+      }
+    ],
+    "generated_by": "deterministic",
+    "source_variant": "v-comm-01"
+  }
+}

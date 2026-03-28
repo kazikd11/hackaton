@@ -1,0 +1,21 @@
+{
+  "request": {
+    "context": "communication",
+    "question": "Why is the Sharepoint copy-paste workflow a good automation candidate?",
+    "include_evidence": true
+  },
+  "response": {
+    "question": "Why is the Sharepoint copy-paste workflow a good automation candidate?",
+    "answer": "The Sharepoint file copy-paste workflow scores 0.82 out of 1.0, making it the highest-ranked automation opportunity in the Communication process family. Three key factors drive this score:\n\n1. **Extreme repetition** (0.92): Users perform an average of 2.6 copy-paste operations per session across 450 sessions, indicating a highly structured and predictable pattern.\n\n2. **High cross-app handoff** (0.90): Data flows between Sharepoint, Teams, and Chrome, creating significant context-switching overhead.\n\n3. **Significant manual effort** (0.85): 1,153 copy operations and 1,080 paste operations show manual data transfer that could be automated through direct integration.\n\nThe recommended approach is **RPA/Integration**: build a direct data pipeline between Sharepoint and the downstream applications (Teams, Chrome-based tools) to eliminate manual copy-paste. This could save an estimated 18.5 hours per week across the 20 affected users.",
+    "evidence": [
+      "1153 copy operations in 450 sessions (2.6/session)",
+      "Cross-app paste detected in 36% of cases",
+      "20 distinct users performing same pattern",
+      "Automation score: 0.82 (highest in Communication family)",
+      "Recommendation: RPA/Integration"
+    ],
+    "generated_by": "deterministic",
+    "process_id": "communication",
+    "confidence": 0.9
+  }
+}

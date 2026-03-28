@@ -1,0 +1,29 @@
+{
+  "process_id": "youtrack-production",
+  "process_name": "Youtrack Production Process",
+  "nodes": [
+    {"id": "start", "label": "Start", "type": "start"},
+    {"id": "youtrack", "label": "Working on Youtrack Issue", "app": "Youtrack", "avg_duration_ms": 240000, "frequency": 1920, "type": "step"},
+    {"id": "chrome", "label": "Browsing in Chrome", "app": "Chrome", "avg_duration_ms": 120000, "frequency": 890, "type": "step"},
+    {"id": "teams", "label": "Use Teams Application", "app": "Teams", "avg_duration_ms": 90000, "frequency": 780, "type": "step"},
+    {"id": "intellij", "label": "Working on kyp-backend", "app": "IntelliJ", "avg_duration_ms": 360000, "frequency": 470, "type": "step"},
+    {"id": "end", "label": "End", "type": "end"}
+  ],
+  "edges": [
+    {"source": "start", "target": "youtrack", "frequency": 1390},
+    {"source": "start", "target": "chrome", "frequency": 280},
+    {"source": "start", "target": "teams", "frequency": 250},
+    {"source": "youtrack", "target": "chrome", "frequency": 740, "label": "investigate"},
+    {"source": "youtrack", "target": "teams", "frequency": 600, "label": "discuss"},
+    {"source": "youtrack", "target": "intellij", "frequency": 390, "label": "fix code"},
+    {"source": "youtrack", "target": "end", "frequency": 190},
+    {"source": "chrome", "target": "youtrack", "frequency": 520},
+    {"source": "chrome", "target": "teams", "frequency": 180},
+    {"source": "chrome", "target": "end", "frequency": 190},
+    {"source": "teams", "target": "youtrack", "frequency": 450},
+    {"source": "teams", "target": "chrome", "frequency": 150},
+    {"source": "teams", "target": "end", "frequency": 180},
+    {"source": "intellij", "target": "youtrack", "frequency": 290},
+    {"source": "intellij", "target": "end", "frequency": 180}
+  ]
+}

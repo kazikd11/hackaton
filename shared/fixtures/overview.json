@@ -1,0 +1,74 @@
+{
+  "total_processes": 6,
+  "total_cases": 14280,
+  "total_events": 892450,
+  "total_hours": 4426.2,
+  "total_users": 44,
+  "observation_period": "2026-03-01 to 2026-03-20",
+  "process_families": [
+    {
+      "id": "communication",
+      "name": "Communication",
+      "total_cases": 4850,
+      "total_events": 312000,
+      "total_hours": 1186.5,
+      "user_count": 38,
+      "top_apps": ["Teams", "New Outlook", "Chrome"]
+    },
+    {
+      "id": "coding-activities",
+      "name": "Coding Activities",
+      "total_cases": 2180,
+      "total_events": 178500,
+      "total_hours": 382.0,
+      "user_count": 22,
+      "top_apps": ["IntelliJ", "Code", "Chrome"]
+    },
+    {
+      "id": "youtrack-production",
+      "name": "Youtrack Production Process",
+      "total_cases": 1920,
+      "total_events": 145600,
+      "total_hours": 205.2,
+      "user_count": 28,
+      "top_apps": ["Youtrack", "Chrome", "Teams"]
+    },
+    {
+      "id": "youtrack-support",
+      "name": "Youtrack Support Process",
+      "total_cases": 340,
+      "total_events": 18900,
+      "total_hours": 5.5,
+      "user_count": 12,
+      "top_apps": ["Youtrack", "Teams", "Chrome"]
+    },
+    {
+      "id": "collector",
+      "name": "Collector",
+      "total_cases": 3850,
+      "total_events": 198000,
+      "total_hours": 996.3,
+      "user_count": 44,
+      "top_apps": ["SearchHost", "Explorer", "Chrome"]
+    },
+    {
+      "id": "unassigned",
+      "name": "Unassigned/Other",
+      "total_cases": 1140,
+      "total_events": 39450,
+      "total_hours": 1650.7,
+      "user_count": 44,
+      "top_apps": ["Teams", "Chrome", "Excel"]
+    }
+  ],
+  "top_applications": [
+    {"name": "Teams", "hours": 852.1},
+    {"name": "IntelliJ", "hours": 305.1},
+    {"name": "Chrome", "hours": 177.0},
+    {"name": "Youtrack", "hours": 162.5},
+    {"name": "Code", "hours": 148.7},
+    {"name": "New Outlook", "hours": 136.2},
+    {"name": "Excel", "hours": 108.3},
+    {"name": "Sharepoint", "hours": 87.4}
+  ]
+}

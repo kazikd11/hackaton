@@ -1,0 +1,88 @@
+[
+  {
+    "step_name": "Working on Youtrack Issue",
+    "app": "Youtrack",
+    "frequency": 1920,
+    "avg_duration_ms": 240000,
+    "total_duration_ms": 460800000,
+    "user_count": 28,
+    "click_count": 11520,
+    "text_entry_count": 7680,
+    "copy_count": 620,
+    "paste_count": 580,
+    "automation_signals": [
+      {
+        "signal_type": "app_switch",
+        "description": "Every Youtrack session triggers investigation in Chrome (39%) or Teams discussion (31%)",
+        "severity": "high",
+        "evidence": "1340 outbound transitions from 1920 sessions (70%)"
+      },
+      {
+        "signal_type": "manual_entry",
+        "description": "High text entry volume for issue updates and status changes",
+        "severity": "medium",
+        "evidence": "7680 text entries, 4.0 per session"
+      }
+    ]
+  },
+  {
+    "step_name": "Browsing in Chrome",
+    "app": "Chrome",
+    "frequency": 890,
+    "avg_duration_ms": 120000,
+    "total_duration_ms": 106800000,
+    "user_count": 26,
+    "click_count": 5340,
+    "text_entry_count": 2670,
+    "copy_count": 445,
+    "paste_count": 390,
+    "automation_signals": [
+      {
+        "signal_type": "copy_paste",
+        "description": "Information gathered from Chrome is frequently pasted into Youtrack issues",
+        "severity": "medium",
+        "evidence": "835 copy-paste ops, 58% cross-app to Youtrack"
+      }
+    ]
+  },
+  {
+    "step_name": "Use Teams Application",
+    "app": "Teams",
+    "frequency": 780,
+    "avg_duration_ms": 90000,
+    "total_duration_ms": 70200000,
+    "user_count": 25,
+    "click_count": 3120,
+    "text_entry_count": 2340,
+    "copy_count": 195,
+    "paste_count": 170,
+    "automation_signals": [
+      {
+        "signal_type": "app_switch",
+        "description": "Teams acts as escalation/discussion channel mid-triage, then returns to Youtrack",
+        "severity": "medium",
+        "evidence": "450 of 780 Teams sessions return to Youtrack (58%)"
+      }
+    ]
+  },
+  {
+    "step_name": "Working on kyp-backend",
+    "app": "IntelliJ",
+    "frequency": 470,
+    "avg_duration_ms": 360000,
+    "total_duration_ms": 169200000,
+    "user_count": 18,
+    "click_count": 8460,
+    "text_entry_count": 14100,
+    "copy_count": 560,
+    "paste_count": 480,
+    "automation_signals": [
+      {
+        "signal_type": "high_repetition",
+        "description": "Code fixes follow consistent triage patterns — same Youtrack→IDE→Youtrack loop",
+        "severity": "medium",
+        "evidence": "62% of fix sessions originate from same Youtrack issue types"
+      }
+    ]
+  }
+]

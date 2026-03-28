@@ -1,0 +1,38 @@
+{
+  "process_id": "communication",
+  "process_name": "Communication",
+  "nodes": [
+    {"id": "start", "label": "Start", "type": "start"},
+    {"id": "teams-use", "label": "Use Teams Application", "app": "Teams", "avg_duration_ms": 180000, "frequency": 4200, "type": "step"},
+    {"id": "teams-call", "label": "Call - Microsoft Teams", "app": "Teams", "avg_duration_ms": 420000, "frequency": 2100, "type": "step"},
+    {"id": "outlook", "label": "Use New Outlook Application", "app": "New Outlook", "avg_duration_ms": 120000, "frequency": 1800, "type": "step"},
+    {"id": "chrome", "label": "Browsing in Chrome", "app": "Chrome", "avg_duration_ms": 90000, "frequency": 1200, "type": "step"},
+    {"id": "gmeet", "label": "Use Google Meet", "app": "Google Meet", "avg_duration_ms": 360000, "frequency": 280, "type": "step"},
+    {"id": "sharepoint", "label": "Working on shared files", "app": "Sharepoint", "avg_duration_ms": 150000, "frequency": 450, "type": "step"},
+    {"id": "end", "label": "End", "type": "end"}
+  ],
+  "edges": [
+    {"source": "start", "target": "teams-use", "frequency": 3200},
+    {"source": "start", "target": "outlook", "frequency": 1120},
+    {"source": "start", "target": "chrome", "frequency": 530},
+    {"source": "teams-use", "target": "teams-call", "frequency": 2100, "label": "initiate call"},
+    {"source": "teams-use", "target": "outlook", "frequency": 1450, "label": "check email"},
+    {"source": "teams-use", "target": "chrome", "frequency": 680},
+    {"source": "teams-use", "target": "gmeet", "frequency": 280},
+    {"source": "teams-use", "target": "sharepoint", "frequency": 350},
+    {"source": "teams-use", "target": "end", "frequency": 620},
+    {"source": "teams-call", "target": "teams-use", "frequency": 1650},
+    {"source": "teams-call", "target": "outlook", "frequency": 300},
+    {"source": "teams-call", "target": "end", "frequency": 150},
+    {"source": "outlook", "target": "teams-use", "frequency": 1100},
+    {"source": "outlook", "target": "chrome", "frequency": 380},
+    {"source": "outlook", "target": "end", "frequency": 320},
+    {"source": "chrome", "target": "teams-use", "frequency": 720},
+    {"source": "chrome", "target": "outlook", "frequency": 280},
+    {"source": "chrome", "target": "end", "frequency": 200},
+    {"source": "gmeet", "target": "teams-use", "frequency": 200},
+    {"source": "gmeet", "target": "end", "frequency": 80},
+    {"source": "sharepoint", "target": "teams-use", "frequency": 300},
+    {"source": "sharepoint", "target": "end", "frequency": 150}
+  ]
+}
